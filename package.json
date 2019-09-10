@@ -1,0 +1,11 @@
+{
+  "name": "rdcpv2",
+  "version": "0.0.0",
+  "description": "Remote Desktop Copy V2 is a fresh rebuild of https://burne99.com/s/rdcp allowing multiple copy-paste sites and using modern technologies instead of PHP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ean Milligan",
+  "license": "ISC"
+}
