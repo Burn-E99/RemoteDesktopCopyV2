@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title id="pageTitle">RDCP - New Document</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+	<div class="page">
+		<div class="header">
+			<div id="title">
+				RDCP - New Document
+			</div>
+			<div class="controls">
+				<span class="about">
+					<img onclick="openModal('aboutModal')" alt="About RDCP"
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACGUlEQVRoge2Zu04CQRhGjygWBBsvBREtxV5jYqnvYDD6BCY+h9qrQWNtbeGlMfEBjD6AdiLRxEslBTRoMWxChh+dnRmGJXKSvxk2O+fbXWZnZmHAgP/NkKfzDANLwAqwAMwDOSDb/L0KvAAPwD1wA9wCDU/9WzMD7AEV4DtmPQO7QD64NTAFHAN1Q9nfqg6UgMlQ8hvApwdxvT6A9W6Kp4GTLojrddTsyysZ4CqAfFSXzT69kA4sH9U1MOojQIjHplOVXOU3eygfVdFWfgJ4T0CATyyH2GPHjnVcznUYVz6P+0vKZ4A6MCuJpjoE2MbTCOCJUWDL9OAUap7i+uzquJ6vgpo0/smyh866VUu6rPQIrZik7BGreoMUYDGAiC0LeoMUYC6AiC0FvWFEOCjnqTN9tSf9sePS5ibdgazQlhTG9IZO74G+QQpQDW5hzpfeIAV4DSBiS5ubFOAxgIgtD3qDFOAugIgtbW5SgJsAIrYYuaWAMsmbzD0hXHDpDjSAU5OkgTklxlZk0hY0NWDaPKuilKAA+3HlAcZJxqL+A4d90/UEBFizlY846qH8gas8qHXoWQ/kL5Cn+1ZkUBuuoeTP8bi5G5HGfWQyfWy8XXmJIt0Znd7w8Ic1ZQK13VfzIF5DjfPjoeRbmUZ9qLOZO5WBHSzesK34+syaQm3HrKK2PgoosdbPrBXUWuMONau8JwGfWQcM6Hd+ABEI3S+lKGpPAAAAAElFTkSuQmCC">
+				</span>
+				<span class="open">
+					<img onclick="openModal('openModal')" alt="Open RDCP"
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAAAmJLR0QA/4ePzL8AAAFjSURBVFjD7dZNSsNAGMbxf4sGitKFG8VNV67sQkTrTo/gITyCZxDbHsCtJ9CDVDAW/ECEIkjbpaJQYmszLuI4iVZBmCe46DubkEV+vPNk3gSm9T8roEEP823ds+sPqU8AkhWx5gvp/ogYbij5Qcyv6ygP5O+rS51AjRgMh+7xhQ/Ef/VZ1iP22UAxj2OYC/I1+FN2mNMi+/pOToCA5sQp5uHEJDe2gYbixLhXeEyZAX2WvO9Tz71d1wyoCAgIHHIGbEkSP88im2qkBdQkSGiDjygT88S8AFmxnYSMWJUQz3SKqc3SJHJBXNTH7qawMHZ78UiBEkPJZ7hqO2lhWGdW0EfErUNUm9VmZBFd7CHkhNhaIJbEvuE6gZr7gfFYb1xmEUVdEaURaSI5IhUWVXPLIZpEYtppRLNZd7zoO/k8iAlSVSZikaGASH57U8ixAGnSyd6Y4YAHb/PqlZA9yZialrd6B3PNpqAotRHNAAAAAElFTkSuQmCC">
+				</span>
+				<span class="save">
+					<img onclick="openModal('saveAsModal')" alt="Save RDCP"
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAAAmJLR0QA/4ePzL8AAAC0SURBVFjD7dcxDsIwDAXQvyB6iPbEUPUYndigPRHlFoQhE40a82MrYfD3ksHJUyxlCOD553SY8EJQ1IyThEwqINZNYva3YBN33XGWm7SIwFghWYZF9n3hF8YSOWRskQPGGgmYayDvGkhwREYppKeIoQxZMBDEWoZYlCOONEQe5HPssfAIR8QnSSMlccQRRxxpg3yvypDMGVUQ7cc0HdczbRiTiWrrkiIdRmxmwIZr/rPtaZkPL/XFZrAA09gAAAAASUVORK5CYII=">
+				</span>
+			</div>
+		</div>
+		<textarea id="content"></textarea>
+	</div>
+
+	<div id="openModal" class="modal" onclick="closeModal('openModal')">
+		<div class="modal-internal" onclick="event.preventDefault();event.stopPropagation();">
+			<h1>Open RDCP<span class="close" onclick="closeModal('openModal')">&#x00D7;</span></h1>
+			<div>
+				<div class="form-group">
+					<label for="rdcpName">Name:</label>
+					<input name="rdcpName" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="rdcpPass">Password:</label>
+					<input name="rdcpPass" type="password" />
+				</div>
+
+				<div class="form-submit">
+					<button>Open</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="aboutModal" class="modal" onclick="closeModal('aboutModal')">
+		<div class="modal-internal" onclick="event.preventDefault();event.stopPropagation();">
+			<h1>About RDCP<span class="close" onclick="closeModal('aboutModal')">&#x00D7;</span></h1>
+			<div>
+				<p>Remote Desktop CoPy (RDCP) is a free tool providing private text documents to copy and paste from.
+					The oddly specific name comes from my initial use when this was crappily built in PHP and made for
+					only one user with only one copy-paste drop zone. The new V2 you are currently on supports
+					theoretically infinite documents.</p>
+				<br />
+				<p>All icons from <a href="https://icons8.com/" target="_blank">Icons8</a>.</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="saveAsModal" class="modal" onclick="closeModal('saveAsModal')">
+		<div class="modal-internal" onclick="event.preventDefault();event.stopPropagation();">
+			<h1>Creating New RDCP<span class="close" onclick="closeModal('saveAsModal')">&#x00D7;</span></h1>
+			<div>
+				<div class="form-group">
+					<label for="rdcpName">Name:</label>
+					<input name="rdcpName" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="rdcpPass">Password:</label>
+					<input name="rdcpPass" type="password" />
+				</div>
+				<div class="form-group">
+					<label for="rdcpPassCheck">Retype Password:</label>
+					<input name="rdcpPassCheck" type="password" />
+				</div>
+
+				<div class="form-submit">
+					<button>Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/js/main.js"></script>
+</body>
+
+</html>
